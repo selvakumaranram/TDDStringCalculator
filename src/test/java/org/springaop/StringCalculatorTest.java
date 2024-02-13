@@ -26,4 +26,10 @@ public class StringCalculatorTest {
         assertEquals(6, stringCalculator.addStringNumbers("1\n2,3"));
     }
 
+    @Test
+    public void testSemicolon() {
+        assertEquals(10, stringCalculator.addStringNumbers("1;5;4"));
+    }
+
+
 }
