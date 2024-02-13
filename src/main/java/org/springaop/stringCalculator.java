@@ -4,7 +4,10 @@ public class stringCalculator {
     public static int addStringNumbers(String numbers) {
         int sum = 0;
         if (numbers.isEmpty()) return 0;
-        if (numbers != null && !numbers.isEmpty()) return Integer.parseInt(numbers);
+        String[] numsArray = numbers.split(",");
+        for (String num : numsArray) {
+            sum += Integer.parseInt(num);
+        }
         return sum;
     }
 }
