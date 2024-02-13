@@ -5,7 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class incubyteStringCalculatorTest {
+public class IncubyteStringCalculatorTest {
+
+    IncubyteStringCalculator incubyteStringCalculator=new IncubyteStringCalculator();
     @Test
     public void returnZeroIfItisEmptyString()
     {
