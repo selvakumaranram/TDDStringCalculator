@@ -3,7 +3,7 @@ package org.springTDDCraftsPerson;
 import java.util.ArrayList;
 import java.util.List;
 
-public class stringCalculator {
+public class StringCalculator {
     public static int addStringNumbers(String numbers) {
         int sum = 0;
 
@@ -29,16 +29,5 @@ public class stringCalculator {
         }
         return sum;
     }
-
-    /**
-     * Hello world!
-     *
-     */
-    public static class App
-    {
-        public static void main( String[] args )
-        {
-            System.out.println( "Hello World!" );
-        }
-    }
 }
+
