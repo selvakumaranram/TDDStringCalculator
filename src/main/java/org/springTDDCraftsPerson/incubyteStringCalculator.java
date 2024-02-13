@@ -10,15 +10,21 @@ public class incubyteStringCalculator {
         }
         List<Integer> negatives = new ArrayList<>();
         int sum = 0;
-        String[] numsArray = numbers.split(",");
+        String[] numsArray = numbers.split("[,\\n]");
         for (String num : numsArray) {
             try {
                 int number = Integer.parseInt(num);
-                sum += number;
-
+                if (number < 0) {
+                    negatives.add(number);
+                } else {
+                        sum += number;
+                }
             } catch (NumberFormatException ignored) {
                 // Ignore non-numeric parts
             }
+        }
+        if (!negatives.isEmpty()) {
+            throw new IllegalArgumentException("Negative numbers not allowed: " + negatives.toString());
         }
         return sum;
     }
