@@ -7,8 +7,7 @@ import static org.junit.Assert.assertThrows;
 
 public class StringCalculatorTest {
     @Test
-    public void returnZeroIfItisEmptyString()
-    {
+    public void returnZeroIfItisEmptyString() {
         assertEquals(0, StringCalculator.addStringNumbers(""));
     }
 
@@ -31,6 +30,7 @@ public class StringCalculatorTest {
     public void testSemicolon() {
         assertEquals(10, StringCalculator.addStringNumbers("1;5;4"));
     }
+
     @Test
     public void testCustomCheck() {
         assertEquals(18, StringCalculator.addStringNumbers("//;\n1;\n\n2\n15"));
@@ -43,10 +43,10 @@ public class StringCalculatorTest {
         });
         assertEquals("Negative numbers not allowed: [-2, -4]", exception.getMessage());
     }
+
     @Test
-    public void returnZeroIfItisMoreThanThousand()
-    {
-        assertEquals(0, StringCalculator.addStringNumbers("1;500\n2500"));
+    public void returnZeroIfItisMoreThanThousand() {
+        assertEquals(501, StringCalculator.addStringNumbers("1;500\n2500"));
     }
 
 }

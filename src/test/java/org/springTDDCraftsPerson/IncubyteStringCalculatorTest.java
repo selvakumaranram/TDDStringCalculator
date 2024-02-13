@@ -42,4 +42,9 @@ public class IncubyteStringCalculatorTest {
         assertEquals(2, incubyteStringCalculator.addStringNumbers("2,1001"));
     }
 
+    @Test
+    public void multipleDelimitersShouldWork() {
+        assertEquals(6, incubyteStringCalculator.addStringNumbers("//[*][%]\n1*2%3"));
+    }
+
 }

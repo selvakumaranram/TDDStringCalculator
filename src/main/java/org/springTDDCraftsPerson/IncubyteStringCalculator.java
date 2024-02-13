@@ -6,13 +6,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class IncubyteStringCalculator {
+    private static final int MAX_NUMBER = 1000;
+
     public int addStringNumbers(String numbers) {
         if (numbers.isEmpty()) {
             return 0;
         }
         // Check for a custom delimiter and split numbers
         String[] numsArray = processCustomDelimiterAndSplitNumbers(numbers);
-        return processNumberAndSum(numsArray );
+        return processNumberAndSum(numsArray);
     }
 
     private int processNumberAndSum(String[] numsArray) {
@@ -23,10 +25,9 @@ public class IncubyteStringCalculator {
                 int number = Integer.parseInt(num);
                 if (number < 0) {
                     negatives.add(number);
-                }else if (number > 1000) {
+                } else if (number > MAX_NUMBER) {
                     continue; // Ignore numbers greater than 1000
-                }
-                else {
+                } else {
                     sum += number;
                 }
             } catch (NumberFormatException ignored) {
@@ -46,7 +47,8 @@ public class IncubyteStringCalculator {
             delimiter = numbers.substring(2, delimiterIndex);
             numbers = numbers.substring(delimiterIndex + 1);
         }
-        String[] splitNumbers = numbers.split(delimiter + "|\\n");
+        String[] splitNumbers = numbers.split("[" + delimiter + "|\n]");
+        System.out.println("splitNumbers :"+splitNumbers);
         return splitNumbers;
     }
 }
