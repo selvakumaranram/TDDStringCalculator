@@ -29,4 +29,9 @@ public class incubyteStringCalculatorTest {
         });
         assertEquals("Negative numbers not allowed: [-2, -4]", exception.getMessage());
     }
+
+    @Test
+    public void testCustomDelimiter() {
+        assertEquals(3, incubyteStringCalculator.addStringNumbers("//;\n1;2"));
+    }
 }

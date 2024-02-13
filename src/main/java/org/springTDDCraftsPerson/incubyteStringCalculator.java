@@ -8,16 +8,20 @@ public class incubyteStringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        List<Integer> negatives = new ArrayList<>();
+        return processNumberAndSum(numbers );
+    }
+
+    private static int processNumberAndSum(String numbers) {
         int sum = 0;
         String[] numsArray = numbers.split("[,\\n]");
+        List<Integer> negatives = new ArrayList<>();
         for (String num : numsArray) {
             try {
                 int number = Integer.parseInt(num);
                 if (number < 0) {
                     negatives.add(number);
                 } else {
-                        sum += number;
+                    sum += number;
                 }
             } catch (NumberFormatException ignored) {
                 // Ignore non-numeric parts
