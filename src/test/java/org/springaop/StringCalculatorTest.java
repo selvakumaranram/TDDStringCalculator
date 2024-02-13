@@ -16,5 +16,8 @@ public class StringCalculatorTest {
         assertEquals(1, stringCalculator.addStringNumbers("1"));
     }
 
-
+    @Test
+    public void returnTwoNumbersWithComma() {
+        assertEquals(1, stringCalculator.addStringNumbers("1"));
+    }
 }
