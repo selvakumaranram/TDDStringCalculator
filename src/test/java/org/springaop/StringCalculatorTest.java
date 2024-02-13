@@ -20,4 +20,10 @@ public class StringCalculatorTest {
     public void returnTwoNumbersWithComma() {
         assertEquals(60, stringCalculator.addStringNumbers("15,20,25"));
     }
+
+    @Test
+    public void testNewLinesBetweenNumbers() {
+        assertEquals(6, stringCalculator.addStringNumbers("1\n2,3"));
+    }
+
 }
