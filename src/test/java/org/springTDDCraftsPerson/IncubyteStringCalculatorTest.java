@@ -36,4 +36,10 @@ public class IncubyteStringCalculatorTest {
     public void testCustomDelimiter() {
         assertEquals(3, incubyteStringCalculator.addStringNumbers("//;\n1;2"));
     }
+
+    @Test
+    public void ingnoringnumbersGreaterThan1000() {
+        assertEquals(2, incubyteStringCalculator.addStringNumbers("2,1001"));
+    }
+
 }

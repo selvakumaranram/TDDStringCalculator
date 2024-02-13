@@ -23,7 +23,10 @@ public class IncubyteStringCalculator {
                 int number = Integer.parseInt(num);
                 if (number < 0) {
                     negatives.add(number);
-                } else {
+                }else if (number > 1000) {
+                    continue; // Ignore numbers greater than 1000
+                }
+                else {
                     sum += number;
                 }
             } catch (NumberFormatException ignored) {
