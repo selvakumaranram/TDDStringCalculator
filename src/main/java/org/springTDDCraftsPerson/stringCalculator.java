@@ -6,7 +6,6 @@ import java.util.List;
 public class stringCalculator {
     public static int addStringNumbers(String numbers) {
         int sum = 0;
-        if (numbers.isEmpty()) return 0;
 
         // Split the string based on the following special characters
         String[] numsArray = numbers.split("[,;/\\n//]");
@@ -14,8 +13,8 @@ public class stringCalculator {
 
         // Iterate through numsArray array
         for (String num : numsArray) {
-            int number = Integer.parseInt(num);
             try {
+                int number = Integer.parseInt(num);
                 if (number < 0) {
                     negatives.add(number);
                 } else {
@@ -24,6 +23,9 @@ public class stringCalculator {
             } catch (NumberFormatException ignored) {
                 // Ignore non-numeric parts
             }
+        }
+        if (!negatives.isEmpty()) {
+            throw new IllegalArgumentException("Negative numbers not allowed: " + negatives.toString());
         }
         return sum;
     }
