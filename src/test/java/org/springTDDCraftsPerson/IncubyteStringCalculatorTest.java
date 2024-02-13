@@ -7,10 +7,10 @@ import static org.junit.Assert.assertThrows;
 
 public class IncubyteStringCalculatorTest {
 
-    IncubyteStringCalculator incubyteStringCalculator=new IncubyteStringCalculator();
+    IncubyteStringCalculator incubyteStringCalculator = new IncubyteStringCalculator();
+
     @Test
-    public void returnZeroIfItisEmptyString()
-    {
+    public void returnZeroIfItisEmptyString() {
         assertEquals(0, incubyteStringCalculator.addStringNumbers(""));
     }
 

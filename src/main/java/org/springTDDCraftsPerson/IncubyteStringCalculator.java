@@ -2,8 +2,6 @@ package org.springTDDCraftsPerson;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class IncubyteStringCalculator {
     private static final int MAX_NUMBER = 1000;
@@ -48,7 +46,6 @@ public class IncubyteStringCalculator {
             numbers = numbers.substring(delimiterIndex + 1);
         }
         String[] splitNumbers = numbers.split("[" + delimiter + "|\n]");
-        System.out.println("splitNumbers :"+splitNumbers);
         return splitNumbers;
     }
 }
