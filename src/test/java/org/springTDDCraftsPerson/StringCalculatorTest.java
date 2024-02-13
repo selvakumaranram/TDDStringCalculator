@@ -3,6 +3,7 @@ package org.springTDDCraftsPerson;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class StringCalculatorTest {
     @Test
@@ -33,6 +34,14 @@ public class StringCalculatorTest {
     @Test
     public void testCustomCheck() {
         assertEquals(18, stringCalculator.addStringNumbers("//;\n1;\n\n2\n15"));
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            stringCalculator.addStringNumbers("1,-2,3,-4");
+        });
+        assertEquals("Negative numbers not allowed: [-2, -4]", exception.getMessage());
     }
 
 }
