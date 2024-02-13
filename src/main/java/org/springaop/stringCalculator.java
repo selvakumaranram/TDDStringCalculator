@@ -1,8 +1,10 @@
 package org.springaop;
 
 public class stringCalculator {
-    public static int addStringNumbers(String numbers){
-        if(numbers != null && !numbers.isEmpty()) return Integer.parseInt(numbers);
-        return 0;
+    public static int addStringNumbers(String numbers) {
+        int sum = 0;
+        if (numbers.isEmpty()) return 0;
+        if (numbers != null && !numbers.isEmpty()) return Integer.parseInt(numbers);
+        return sum;
     }
 }
