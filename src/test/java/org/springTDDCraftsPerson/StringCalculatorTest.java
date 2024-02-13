@@ -32,7 +32,7 @@ public class StringCalculatorTest {
     }
     @Test
     public void testCustomCheck() {
-        assertEquals(3, stringCalculator.addStringNumbers("//;\n1;\n\n2\n15"));
+        assertEquals(18, stringCalculator.addStringNumbers("//;\n1;\n\n2\n15"));
     }
 
 }
