@@ -43,5 +43,10 @@ public class StringCalculatorTest {
         });
         assertEquals("Negative numbers not allowed: [-2, -4]", exception.getMessage());
     }
+    @Test
+    public void returnZeroIfItisMoreThanThousand()
+    {
+        assertEquals(0, StringCalculator.addStringNumbers("1;500\n2500"));
+    }
 
 }
