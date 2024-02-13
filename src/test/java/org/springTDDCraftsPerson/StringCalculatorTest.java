@@ -1,4 +1,4 @@
-package org.springaop;
+package org.springTDDCraftsPerson;
 
 import org.junit.Test;
 
